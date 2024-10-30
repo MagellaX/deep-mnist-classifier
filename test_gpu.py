@@ -1,3 +1,4 @@
 import tensorflow as tf
-print("TensorFlow version:", tf.__version__)
-print("GPU Available:", bool(tf.config.list_physical_devices('GPU')))
+
+print(f"TensorFlow version: {tf.__version__}")
+print(f"Num GPUs Available: {len(tf.config.list_physical_devices('GPU'))}")
