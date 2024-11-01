@@ -96,30 +96,6 @@ conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
 pip install "tensorflow<2.11"
 
 
-# MNIST Deep Neural Network with TensorFlow GPU
-
-A deep neural network implementation for MNIST digit classification using TensorFlow with GPU acceleration.
-
-## Prerequisites
-
-- Python 3.9
-- NVIDIA GPU (Tested on RTX 4070)
-- NVIDIA CUDA-capable drivers
-
-## Environment Setup
-
-### 1. GPU Setup (IMPORTANT!)
-```bash
-# Create conda environment
-conda create -n tf python=3.9
-conda activate tf
-
-# Install specific versions known to work together
-pip install numpy==1.23.5  # Install NumPy first to avoid version conflicts
-conda install -c conda-forge cudatoolkit=11.2 cudnn=8.1.0
-pip install "tensorflow<2.11"
-```
-
 ### Common GPU Setup Issues & Solutions
 
 1. **NumPy Version Conflicts**
@@ -138,13 +114,6 @@ pip install "tensorflow<2.11"
    - Use TensorFlow < 2.11 for best compatibility
    - Avoid mixing conda and pip installations
 
-## Project Structure
-```
-deep-mnist-classifier/
-├── main.py           # Main training script
-├── requirements.txt  # Project dependencies
-└── README.md        # Project documentation
-```
 
 ## Installation
 
@@ -166,29 +135,6 @@ pip install "tensorflow<2.11"
 pip install matplotlib
 ```
 
-## Network Architecture
-- Input Layer: 784 neurons (28x28 pixels)
-- Hidden Layer 1: 500 neurons (ReLU)
-- Hidden Layer 2: 500 neurons (ReLU)
-- Hidden Layer 3: 500 neurons (ReLU)
-- Output Layer: 10 neurons (Softmax)
-
-## Usage
-
-```bash
-python main.py
-```
-
-## Expected Output
-```
-MNIST Deep Neural Network - TensorFlow 2.x Version
------------------------------------------------
-GPU is available!
-Loading MNIST dataset...
-Starting training...
-[Training progress...]
-Final Test Accuracy: ~98%
-```
 
 ## Troubleshooting
 
