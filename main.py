@@ -120,9 +120,10 @@ def main():
     print("MNIST Deep Neural Network - TensorFlow 2.x Version")
     print("-----------------------------------------------")
     
-    # Force GPU usage
+    # Check if any GPU devices are available
     physical_devices = tf.config.list_physical_devices('GPU')
     if len(physical_devices) > 0:
+        # Enable memory growth for the GPU
         tf.config.experimental.set_memory_growth(physical_devices[0], True)
         print("GPU is available!")
     else:
@@ -140,6 +141,3 @@ def main():
         print("\nModel saved successfully!")
     except:
         print("\nFailed to save model.")
-
-if __name__ == '__main__':
-    main()
