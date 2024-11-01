@@ -121,12 +121,12 @@ def main():
     print("-----------------------------------------------")
     
     # Force GPU usage
-physical_devices = tf.config.list_physical_devices('GPU')
-if len(physical_devices) > 0:
-    tf.config.experimental.set_memory_growth(physical_devices[0], True)
-    print("GPU is available!")
-else:
-    print("No GPU found. Running on CPU")
+    physical_devices = tf.config.list_physical_devices('GPU')
+    if len(physical_devices) > 0:
+        tf.config.experimental.set_memory_growth(physical_devices[0], True)
+        print("GPU is available!")
+    else:
+        print("No GPU found. Running on CPU")
     
     # Train the model
     model, history = train_model()
